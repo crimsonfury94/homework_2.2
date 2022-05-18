@@ -27,7 +27,7 @@ public class Main {
                 new Slytherin("Грэхэм Монтегю", 43,82,73,86,66,55,12),
                 new Slytherin("Грегори Гойл", 21,35,54,51,48,63,5)
         };
-
-
+Hogwarts hogwarts = new Hogwarts(null,0,0);
+hogwarts.print(lion);
     }
 }

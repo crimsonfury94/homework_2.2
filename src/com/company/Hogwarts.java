@@ -28,7 +28,7 @@ public class Hogwarts {
     public void print(Gryffindor[] wizards) {
         for (int i = 0; i < wizards.length; i++) {
             Gryffindor lion = wizards[i];
-            System.out.println("Имя волшебника " + lion.getStudentName() + "; Навыки: " + lion.getNobility() + " " + lion.getHonor() + " " + lion.getBravery());
+            System.out.println("Имя волшебника " + lion.getStudentName() + "; Навыки: " + lion.getMagicPower() + " " + lion.getTransgressionDistance() + " " + lion.getNobility() + " " + lion.getHonor() + " " + lion.getBravery());
         }
     }
 }
