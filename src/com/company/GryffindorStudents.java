@@ -40,6 +40,10 @@ public class GryffindorStudents extends HogwartsStudents {
         this.bravery = bravery;
     }
 
+    public int getGryffindorAbility() {
+        return gryffindorAbility;
+    }
+
     @Override
     public String toString() {
         return super.toString() +
@@ -52,17 +56,4 @@ public class GryffindorStudents extends HogwartsStudents {
     //  return nobility + honor + bravery;
     // }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GryffindorStudents that = (GryffindorStudents) o;
-        return gryffindorAbility == that.gryffindorAbility;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(gryffindorAbility);
-    }
 }
