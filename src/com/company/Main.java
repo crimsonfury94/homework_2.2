@@ -23,6 +23,5 @@ public class Main {
         SlytherinStudents montague = new SlytherinStudents("Грэхэм Монтегю", 43, 82, 73, 86, 66, 55, 12);
         SlytherinStudents goyle = new SlytherinStudents("Грегори Гойл", 21, 35, 54, 51, 48, 63, 5);
 
-        System.out.println("Лучший ученик "  + granger.equals(weasley));
     }
 }

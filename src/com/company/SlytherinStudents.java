@@ -57,8 +57,7 @@ public class SlytherinStudents extends HogwartsStudents {
     }
 
     public String toString() {
-        return "Имя волшебника " + getStudentName() + "; Навыки: " + " сила магии- " + getMagicPower() +
-                "; расстояние трансгрессии-  " + getApparitionDistance() +
+        return super.toString() +
                 "; хитрость- " + cunning +
                 "; решительность- " + determination +
                 "; амбициозность- " + ambition +

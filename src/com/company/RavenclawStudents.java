@@ -47,8 +47,7 @@ public class RavenclawStudents extends HogwartsStudents {
     }
 
     public String toString() {
-        return "Имя волшебника " + getStudentName() + "; Навыки: " + " сила магии- " + getMagicPower() +
-                "; расстояние трансгрессии-  " + getApparitionDistance() +
+        return super.toString() +
                 "; ум- " + clever +
                 "; мудрость- " + wisdom +
                 "; остроумие- " + wittiness +

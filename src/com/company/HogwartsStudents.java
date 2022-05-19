@@ -25,4 +25,8 @@ public class HogwartsStudents {
         return apparitionDistance;
     }
 
+    public String toString() {
+        return "Имя волшебника " + getStudentName() + "; Навыки: " + "сила магии- " + getMagicPower() +
+                "; расстояние трансгрессии-  " + getApparitionDistance();
+    }
 }

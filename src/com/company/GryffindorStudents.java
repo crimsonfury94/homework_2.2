@@ -42,16 +42,15 @@ public class GryffindorStudents extends HogwartsStudents {
 
     @Override
     public String toString() {
-        return "Имя волшебника " + getStudentName() + "; Навыки: " + " сила магии- " + getMagicPower() +
-                "; расстояние трансгрессии-  " + getApparitionDistance() +
+        return super.toString() +
                 "; благородство- " + nobility +
                 "; честь- " + honor +
                 "; храбрость- " + bravery;
     }
 
-   // public int gryffindorAbility() {
-      //  return nobility + honor + bravery;
-   // }
+    // public int gryffindorAbility() {
+    //  return nobility + honor + bravery;
+    // }
 
 
     @Override

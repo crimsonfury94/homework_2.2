@@ -37,8 +37,7 @@ public class HufflepuffStudents extends HogwartsStudents {
     }
 
     public String toString() {
-        return "Имя волшебника " + getStudentName() + "; Навыки: " + " сила магии- " + getMagicPower() +
-                "; расстояние трансгрессии-  " + getApparitionDistance() +
+        return super.toString() +
                 "; трудолюбие- " + diligence +
                 "; верность- " + loyalty +
                 "; честность- " + honesty;
