@@ -2,9 +2,6 @@ package com.company;
 
 public class Main {
 
-
-
-
     public static void main(String[] args) {
 
         GryffindorStudents granger = new GryffindorStudents("Гермиона Грейнджер", 75, 50, 80, 100, 100);
@@ -23,6 +20,15 @@ public class Main {
         SlytherinStudents montague = new SlytherinStudents("Грэхэм Монтегю", 43, 82, 73, 86, 66, 55, 12);
         SlytherinStudents goyle = new SlytherinStudents("Грегори Гойл", 21, 35, 54, 51, 48, 63, 5);
 
-        System.out.println(potter.getGryffindorAbility());
+        System.out.println(granger.toString());
+        System.out.println(chang.toString());
+        System.out.println(finchFletchley.toString());
+        System.out.println(goyle.toString());
+
+        GryffindorStudents.comparisonGryffindorSkills(weasley, potter);
+        HufflepuffStudents.comparisonHufflepuffSkills(finchFletchley, smith);
+        RavenclawStudents.comparisonRavenclawSkills(chang, belby);
+        SlytherinStudents.comparisonSlytherinSkills(malfoy, montague);
+        HogwartsStudents.comparisonWizardsSkills(diggory, patil);
     }
 }

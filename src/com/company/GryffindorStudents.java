@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Objects;
-
 public class GryffindorStudents extends HogwartsStudents {
     private int nobility;
     private int honor;
@@ -13,7 +11,7 @@ public class GryffindorStudents extends HogwartsStudents {
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-        this.gryffindorAbility = nobility + honor + bravery;
+        gryffindorAbility = nobility + honor + bravery;
     }
 
     public int getNobility() {
@@ -44,7 +42,7 @@ public class GryffindorStudents extends HogwartsStudents {
         return gryffindorAbility;
     }
 
-    @Override
+
     public String toString() {
         return super.toString() +
                 "; благородство- " + nobility +
@@ -52,8 +50,14 @@ public class GryffindorStudents extends HogwartsStudents {
                 "; храбрость- " + bravery;
     }
 
-    // public int gryffindorAbility() {
-    //  return nobility + honor + bravery;
-    // }
+    public static void comparisonGryffindorSkills(GryffindorStudents students, GryffindorStudents student) {
+        int currentWizard = students.getGryffindorAbility();
+        int anotherWizard = student.getGryffindorAbility();
+        if (currentWizard > anotherWizard) {
+            System.out.println(students.getStudentName() + " лучший Гриффиндорец, чем " + student.getStudentName());
+        } else {
+            System.out.println(student.getStudentName() + " лучший Гриффиндорец, чем " + students.getStudentName());
+        }
+    }
 
 }

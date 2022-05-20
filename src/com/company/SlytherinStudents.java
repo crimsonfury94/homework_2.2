@@ -6,6 +6,7 @@ public class SlytherinStudents extends HogwartsStudents {
     private int ambition;
     private int ingenuity;
     private int thirstForPower;
+    private final int slytherinAbility;
 
     public SlytherinStudents(String studentName, int magicPower, int apparitionDistance, int cunning, int determination, int ambition, int ingenuity, int thirstForPower) {
         super(studentName, magicPower, apparitionDistance);
@@ -14,6 +15,7 @@ public class SlytherinStudents extends HogwartsStudents {
         this.ambition = ambition;
         this.ingenuity = ingenuity;
         this.thirstForPower = thirstForPower;
+        slytherinAbility = cunning + determination + ambition + ingenuity + thirstForPower;
     }
 
     public int getCunning() {
@@ -56,6 +58,10 @@ public class SlytherinStudents extends HogwartsStudents {
         this.thirstForPower = thirstForPower;
     }
 
+    public int getSlytherinAbility() {
+        return slytherinAbility;
+    }
+
     public String toString() {
         return super.toString() +
                 "; хитрость- " + cunning +
@@ -65,7 +71,13 @@ public class SlytherinStudents extends HogwartsStudents {
                 "; жажда власти- " + thirstForPower;
     }
 
-    public int slytherinAbility() {
-        return getMagicPower() + getApparitionDistance() + cunning + determination + ambition + ingenuity + thirstForPower;
+    public static void comparisonSlytherinSkills(SlytherinStudents students, SlytherinStudents student) {
+        int currentWizard = students.getSlytherinAbility();
+        int anotherWizard = student.getSlytherinAbility();
+        if (currentWizard > anotherWizard) {
+            System.out.println(students.getStudentName() + " лучший Слизеринец, чем " + student.getStudentName());
+        } else {
+            System.out.println(student.getStudentName() + " лучший Слизеринец, чем " + students.getStudentName());
+        }
     }
 }
