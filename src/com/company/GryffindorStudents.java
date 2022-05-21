@@ -60,5 +60,17 @@ public class GryffindorStudents extends HogwartsStudents {
             System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Гриффиндорцы");
         }
     }
+
+    public void comparisonGryffindorSkillsS(GryffindorStudents students) {
+        int currentWizard = gryffindorAbility();
+        int anotherWizard = students.gryffindorAbility();
+        if (currentWizard > anotherWizard) {
+            System.out.println(getStudentName() + " лучший Гриффиндорец, чем " + students.getStudentName());
+        } else if (currentWizard < anotherWizard) {
+            System.out.println(students.getStudentName() + " лучший Гриффиндорец, чем " + getStudentName());
+        } else if (currentWizard == anotherWizard) {
+            System.out.println(students.getStudentName() + " и " + getStudentName() + " лучшие Гриффиндорцы");
+        }
+    }
 }
 

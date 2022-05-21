@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         GryffindorStudents granger = new GryffindorStudents("Гермиона Грейнджер", 75, 50, 80, 100, 100);
-        GryffindorStudents weasley = new GryffindorStudents("Рон Уизли", 50, 30, 80, 80, 20);
+        GryffindorStudents weasley = new GryffindorStudents("Рон Уизли", 50, 30, 200, 80, 20);
         GryffindorStudents potter = new GryffindorStudents("Гарри Поттер", 70, 90, 100, 100, 100);
 
         HufflepuffStudents smith = new HufflepuffStudents("Захария Смит", 50, 45, 70, 80, 90);
@@ -30,5 +30,7 @@ public class Main {
         RavenclawStudents.comparisonRavenclawSkills(chang, belby);
         SlytherinStudents.comparisonSlytherinSkills(malfoy, montague);
         HogwartsStudents.comparisonWizardsSkills(diggory, patil);
+
+        potter.comparisonGryffindorSkillsS(weasley);
     }
 }
