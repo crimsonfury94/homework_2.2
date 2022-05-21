@@ -6,7 +6,7 @@ public class SlytherinStudents extends HogwartsStudents {
     private int ambition;
     private int ingenuity;
     private int thirstForPower;
-    private final int slytherinAbility;
+
 
     public SlytherinStudents(String studentName, int magicPower, int apparitionDistance, int cunning, int determination, int ambition, int ingenuity, int thirstForPower) {
         super(studentName, magicPower, apparitionDistance);
@@ -15,7 +15,7 @@ public class SlytherinStudents extends HogwartsStudents {
         this.ambition = ambition;
         this.ingenuity = ingenuity;
         this.thirstForPower = thirstForPower;
-        slytherinAbility = cunning + determination + ambition + ingenuity + thirstForPower;
+
     }
 
     public int getCunning() {
@@ -58,8 +58,8 @@ public class SlytherinStudents extends HogwartsStudents {
         this.thirstForPower = thirstForPower;
     }
 
-    public int getSlytherinAbility() {
-        return slytherinAbility;
+    public int slytherinAbility() {
+        return cunning + determination + ambition + ingenuity + thirstForPower;
     }
 
     public String toString() {
@@ -72,12 +72,14 @@ public class SlytherinStudents extends HogwartsStudents {
     }
 
     public static void comparisonSlytherinSkills(SlytherinStudents students, SlytherinStudents student) {
-        int currentWizard = students.getSlytherinAbility();
-        int anotherWizard = student.getSlytherinAbility();
+        int currentWizard = students.slytherinAbility();
+        int anotherWizard = student.slytherinAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Слизеринец, чем " + student.getStudentName());
-        } else {
+        } else if (currentWizard < anotherWizard){
             System.out.println(student.getStudentName() + " лучший Слизеринец, чем " + students.getStudentName());
+        } else if (currentWizard == anotherWizard) {
+            System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Слизеринцы");
         }
     }
 }

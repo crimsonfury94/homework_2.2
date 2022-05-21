@@ -13,7 +13,7 @@ public class Main {
         HufflepuffStudents finchFletchley = new HufflepuffStudents("Джастин Финч-Флетчли", 55, 43, 61, 74, 88);
 
         RavenclawStudents chang = new RavenclawStudents("Чжоу Чанг", 44, 31, 58, 60, 54, 71);
-        RavenclawStudents patil = new RavenclawStudents("Падма Патил", 41, 27, 63, 72, 66, 88);
+        RavenclawStudents patil = new RavenclawStudents("Падма Патил", 60, 62, 63, 72, 66, 88);
         RavenclawStudents belby = new RavenclawStudents("Маркус Белби", 56, 38, 55, 53, 86, 42);
 
         SlytherinStudents malfoy = new SlytherinStudents("Драко Малфой", 69, 90, 82, 34, 77, 21, 100);
@@ -25,7 +25,7 @@ public class Main {
         System.out.println(finchFletchley.toString());
         System.out.println(goyle.toString());
 
-        GryffindorStudents.comparisonGryffindorSkills(weasley, potter);
+        GryffindorStudents.comparisonGryffindorSkills(potter,weasley);
         HufflepuffStudents.comparisonHufflepuffSkills(finchFletchley, smith);
         RavenclawStudents.comparisonRavenclawSkills(chang, belby);
         SlytherinStudents.comparisonSlytherinSkills(malfoy, montague);

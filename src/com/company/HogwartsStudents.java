@@ -2,16 +2,16 @@ package com.company;
 
 public class HogwartsStudents {
     private String studentName;
-    private final int magicPower;
-    private final int apparitionDistance;
-    private final int wizardsAbility;
+    private int magicPower;
+    private int apparitionDistance;
+
 
 
     public HogwartsStudents(String studentName, int magicPower, int apparitionDistance) {
         this.studentName = studentName;
         this.magicPower = magicPower;
         this.apparitionDistance = apparitionDistance;
-        wizardsAbility = magicPower + apparitionDistance;
+
 
     }
 
@@ -23,6 +23,13 @@ public class HogwartsStudents {
         return studentName;
     }
 
+    public void setMagicPower(int magicPower) {
+        this.magicPower = magicPower;
+    }
+
+    public void setApparitionDistance(int apparitionDistance) {
+        this.apparitionDistance = apparitionDistance;
+    }
 
     public int getMagicPower() {
         return magicPower;
@@ -39,18 +46,20 @@ public class HogwartsStudents {
                 "; расстояние трансгрессии-  " + apparitionDistance;
     }
 
-    public int getWizardsAbility() {
-        return wizardsAbility;
+    private int wizardsAbility() {
+        return magicPower + apparitionDistance;
     }
 
-    public static void comparisonWizardsSkills(HufflepuffStudents students, RavenclawStudents student) {
-        int currentWizard = students.getWizardsAbility();
-        int anotherWizard = student.getWizardsAbility();
+    public static void comparisonWizardsSkills(HogwartsStudents students, HogwartsStudents student) {
+        int currentWizard = students.wizardsAbility();
+        int anotherWizard = student.wizardsAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " обладает бОльшей мощностью магии, чем " + student.getStudentName());
-        } else {
+        } else if (currentWizard < anotherWizard) {
             System.out.println(student.getStudentName() + " обладает бОльшей мощностью магии, чем " + students.getStudentName());
 
+        } else if (currentWizard == anotherWizard) {
+            System.out.println(students.getStudentName() + " и " + student.getStudentName() + " обладают равной мощностью магии");
         }
     }
 

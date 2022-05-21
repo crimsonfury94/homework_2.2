@@ -5,7 +5,7 @@ public class RavenclawStudents extends HogwartsStudents {
     private int wisdom;
     private int wittiness;
     private int creative;
-    private final int ravenclawAbility;
+
 
     public RavenclawStudents(String studentName, int magicPower, int apparitionDistance, int clever, int wisdom, int wittiness, int creative) {
         super(studentName, magicPower, apparitionDistance);
@@ -13,7 +13,7 @@ public class RavenclawStudents extends HogwartsStudents {
         this.wisdom = wisdom;
         this.wittiness = wittiness;
         this.creative = creative;
-        ravenclawAbility = clever + wisdom + wittiness + creative;
+
 
     }
 
@@ -49,8 +49,8 @@ public class RavenclawStudents extends HogwartsStudents {
         this.creative = creative;
     }
 
-    public int getRavenclawAbility() {
-        return ravenclawAbility;
+    private int ravenclawAbility() {
+        return clever + wisdom + wittiness + creative;
     }
 
     public String toString() {
@@ -62,12 +62,14 @@ public class RavenclawStudents extends HogwartsStudents {
     }
 
     public static void comparisonRavenclawSkills(RavenclawStudents students, RavenclawStudents student) {
-        int currentWizard = students.getRavenclawAbility();
-        int anotherWizard = student.getRavenclawAbility();
+        int currentWizard = students.ravenclawAbility();
+        int anotherWizard = student.ravenclawAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Когтевранец, чем " + student.getStudentName());
-        } else {
+        } else if (currentWizard < anotherWizard){
             System.out.println(student.getStudentName() + " лучший Когтевранец, чем " + students.getStudentName());
+        } else if (currentWizard == anotherWizard) {
+            System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Когтевранцы");
         }
     }
 }
