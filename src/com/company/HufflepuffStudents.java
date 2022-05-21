@@ -53,7 +53,7 @@ public class HufflepuffStudents extends HogwartsStudents {
         int anotherWizard = student.hufflepuffAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Пуфендуец, чем " + student.getStudentName());
-        } else if (currentWizard < anotherWizard){
+        } else if (currentWizard < anotherWizard) {
             System.out.println(student.getStudentName() + " лучший Пуфендуец, чем " + students.getStudentName());
         } else if (currentWizard == anotherWizard) {
             System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Пуфендуйцы");

@@ -6,7 +6,6 @@ public class HogwartsStudents {
     private int apparitionDistance;
 
 
-
     public HogwartsStudents(String studentName, int magicPower, int apparitionDistance) {
         this.studentName = studentName;
         this.magicPower = magicPower;

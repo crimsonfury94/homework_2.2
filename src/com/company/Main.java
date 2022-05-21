@@ -25,7 +25,7 @@ public class Main {
         System.out.println(finchFletchley.toString());
         System.out.println(goyle.toString());
 
-        GryffindorStudents.comparisonGryffindorSkills(potter,weasley);
+        GryffindorStudents.comparisonGryffindorSkills(potter, weasley);
         HufflepuffStudents.comparisonHufflepuffSkills(finchFletchley, smith);
         RavenclawStudents.comparisonRavenclawSkills(chang, belby);
         SlytherinStudents.comparisonSlytherinSkills(malfoy, montague);

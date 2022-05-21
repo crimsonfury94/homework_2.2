@@ -76,7 +76,7 @@ public class SlytherinStudents extends HogwartsStudents {
         int anotherWizard = student.slytherinAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Слизеринец, чем " + student.getStudentName());
-        } else if (currentWizard < anotherWizard){
+        } else if (currentWizard < anotherWizard) {
             System.out.println(student.getStudentName() + " лучший Слизеринец, чем " + students.getStudentName());
         } else if (currentWizard == anotherWizard) {
             System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Слизеринцы");

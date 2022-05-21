@@ -38,7 +38,7 @@ public class GryffindorStudents extends HogwartsStudents {
     }
 
     private int gryffindorAbility() {
-        return nobility + honor+ bravery;
+        return nobility + honor + bravery;
     }
 
 
@@ -54,11 +54,11 @@ public class GryffindorStudents extends HogwartsStudents {
         int anotherWizard = student.gryffindorAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Гриффиндорец, чем " + student.getStudentName());
-        } else if (currentWizard < anotherWizard){
+        } else if (currentWizard < anotherWizard) {
             System.out.println(student.getStudentName() + " лучший Гриффиндорец, чем " + students.getStudentName());
         } else if (currentWizard == anotherWizard) {
             System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Гриффиндорцы");
         }
     }
-    }
+}
 

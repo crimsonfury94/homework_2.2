@@ -66,7 +66,7 @@ public class RavenclawStudents extends HogwartsStudents {
         int anotherWizard = student.ravenclawAbility();
         if (currentWizard > anotherWizard) {
             System.out.println(students.getStudentName() + " лучший Когтевранец, чем " + student.getStudentName());
-        } else if (currentWizard < anotherWizard){
+        } else if (currentWizard < anotherWizard) {
             System.out.println(student.getStudentName() + " лучший Когтевранец, чем " + students.getStudentName());
         } else if (currentWizard == anotherWizard) {
             System.out.println(students.getStudentName() + " и " + student.getStudentName() + " лучшие Когтевранцы");
